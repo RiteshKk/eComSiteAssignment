@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Nykaa</string>
+    <string name="product_image">Product-Image</string>
+    <string name="wish_list_button">WishList-Button</string>
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+</resources>

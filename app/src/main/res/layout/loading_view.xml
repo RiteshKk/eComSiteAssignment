@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="25dp"
+        android:visibility="gone"
+        android:layout_height="25dp"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:indeterminateTint="@color/pink"
+        android:progressTint="@color/pink" />
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:visibility="visible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/pink"
+        tool:text="Loading 20 of 60" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/text_margin"
+        android:text="@string/retry"
+        app:backgroundTint="@color/pink" />
+</LinearLayout>

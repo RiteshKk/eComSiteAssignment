@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id("com.google.dagger.hilt.android")
+    id 'dagger.hilt.android.plugin'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.20'
+
+}
+
+android {
+    namespace 'com.riteshkumar.nykaassignment'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.riteshkumar.nykaassignment"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Testing
+    testImplementation("io.mockk:mockk:1.9.3")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+
+    //Hilt Dependency Injection
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    kapt "com.google.dagger:hilt-android-compiler:2.44.1"
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    // Retrofit2 Dependencies
+    def retrofit2_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    //Logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+    //Paging
+    def paging_version = "3.1.1"
+    testImplementation("androidx.paging:paging-common-ktx:$paging_version")
+    implementation("androidx.paging:paging-runtime:$paging_version")
+
+    //Image Loading
+    implementation 'io.coil-kt:coil-compose:2.2.2'
+
+    //Kotlinx Serialization
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1'
+
+
+
+}
