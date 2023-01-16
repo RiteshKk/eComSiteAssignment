@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                 spanSizeLookup = object : SpanSizeLookup() {
                     override fun getSpanSize(position: Int): Int {
                         return when (position) {
-                            listingAdapter.itemCount -> 2
+                            listingAdapter.itemCount -> spanCount
                             else -> 1
                         }
                     }
