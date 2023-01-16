@@ -5,6 +5,7 @@
              2. Couritines
              3. MVVM
              4. coin Library for Async Image Loading
+             5. Hilt Dependancy Injection
              
  ## Author
   
