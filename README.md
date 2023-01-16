@@ -1,9 +1,10 @@
 # #NykaaAssignment
 
  # *In this android sample used
-             1. Kotlin and Kotlin Couritines
-             2. MVVM
-             3. coin Library for Async Image Loading
+             1. Kotlin
+             2. Couritines
+             3. MVVM
+             4. coin Library for Async Image Loading
              
  ## Author
   
