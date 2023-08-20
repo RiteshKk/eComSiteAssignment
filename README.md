@@ -1,4 +1,4 @@
-# #NykaaAssignment
+# #Assignment for eCommerce site
 
  # *In this android sample used
              1. Kotlin
